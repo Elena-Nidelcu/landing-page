@@ -70,6 +70,20 @@
     border: 2px solid rgb(241, 223, 26);
 }
 
+.price {
+    text-align: center; 
+    font-family: Georgia, serif;
+    font-size: 300%;
+}
+
+.price button {
+    background-color: transparent;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 40%;
+    font-family: Georgia, serif;
+}
+
 /* Flexbox for testimonials section */
 .testimonial-container {
     display: flex; /* Aligns items in a row */
