@@ -6,7 +6,7 @@
 }
 
 .hero {
-    background-image: url('hero.jpg');
+    background-image: url('images/hero.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -15,7 +15,7 @@
 }
 
 .uvp {
-    background-image: url('uvp.jpg');
+    background-image: url('images/uvp.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -24,7 +24,7 @@
 }
 
 .team {
-    background-image: url('team.jpg');
+    background-image: url('images/team.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
