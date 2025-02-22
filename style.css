@@ -118,3 +118,28 @@ section {
     padding: 50px 0;
     overflow: hidden;
 }
+
+.qa {
+    font-size: 200%;
+    margin: 20px;
+    padding-right: 40px;
+}
+
+.qa h2 {
+    font-size: 150%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.qa div {
+    margin-bottom: 20px;
+}
+
+.qa p {
+    margin: 10px 0;
+}
+
+.answer {
+    background-color: rgb(225, 224, 224);
+    padding: 10px; 
+}
