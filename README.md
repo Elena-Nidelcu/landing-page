@@ -6,7 +6,27 @@ This landing page is designed to promote and sell tickets for a 10 km race in Ch
 The goal of this page is to attract runners of all levels by offering a clear and engaging experience while making the registration process simple.
 
 ## Screenshots
-*(Add screenshots here)*
+### Hero Section  
+![Hero Section](screenshots/hero.png)  
+This is the header of the page. The button "Join now" links to the "Price" section.
+
+### Unique Value Proposition (UVP)  
+![UVP](screenshots/uvp.png)  
+
+### Reviews  
+![Reviews](screenshots/reviews.png)  
+Here are the reviews from the BEST REAL participants of previous races.
+
+### Price Section  
+![Price Section](screenshots/price.png)  
+
+### FAQ  
+![FAQ](screenshots/faq.png)  
+
+### Contact Information  
+![Contact Information](screenshots/contacts.png)  
+This is the footer of the page.
 
 ## Live Demo
-[View Live Demo](#https://elena-nidelcu.github.io/landing-page/) *(Replace with actual link when deployed)*
+[Link to the page](https://elena-nidelcu.github.io/landing-page/) 
+(Using GitHub pages)
