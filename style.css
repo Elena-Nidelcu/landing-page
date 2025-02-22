@@ -1,4 +1,4 @@
-/* Reset default styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -33,12 +33,13 @@
 }
 
 .hero h2, .uvp h2 {
-    color: rgb(241, 223, 26);
+    color: rgb(0, 11, 135);
     font-family: Georgia, serif;
     font-size: 500%;
 }
 
 .team h2 {
+    color: rgb(0, 11, 135);
     font-family: Georgia, serif;
     font-size: 400%;
 }
@@ -55,19 +56,20 @@
 }
 
 .hero p, .uvp p {
-    color: rgb(241, 223, 26);
+    color: rgb(0, 11, 135);
     font-family: Georgia, serif;
     font-size: 200%;
+    margin: 20px;
 }
 
 .hero button {
     background-color: transparent;
-    color: rgb(241, 223, 26);
+    color: rgb(0, 11, 135);
     padding: 15px 32px;
     text-align: center;
     font-size: 20px;
     font-family: Georgia, serif;
-    border: 2px solid rgb(241, 223, 26);
+    border: 2px solid rgb(0, 11, 135);
 }
 
 .price {
@@ -93,22 +95,24 @@
     gap: 20px; /* Adds space between elements */
 }
 
-.leftbox, .middlebox, .rightbox {
+.box {
     width: 30%; 
     text-align: center;
+    font-family: Garamond;
 }
 
-.leftbox img, .middlebox img, .rightbox img {
+.box img {
     width: 200px;
     height: 250px;
     object-fit: cover;
 }
 
-.leftbox h2, .middlebox h2, .rightbox h2 {
+.box h2 {
     font-size: 300%;
+    font-family: Georgia, serif;
 }
 
-.leftbox p, .middlebox p, .rightbox p {
+.box p {
     font-size: 200%;
 }
 
@@ -116,7 +120,6 @@
 section {
     width: 100%;
     padding: 50px 0;
-    overflow: hidden;
 }
 
 .qa {
