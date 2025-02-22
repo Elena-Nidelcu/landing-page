@@ -143,3 +143,16 @@ section {
     background-color: rgb(225, 224, 224);
     padding: 10px; 
 }
+
+footer {
+    background-color: rgb(54, 54, 54); 
+    color: white; 
+    padding: 20px;
+    text-align: center; 
+    font-size: 110%;
+}
+
+footer a {
+    color: white; 
+    margin: 5px 0; /* Vertical space between links */
+}
