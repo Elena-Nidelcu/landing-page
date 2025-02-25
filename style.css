@@ -11,7 +11,24 @@
     background-attachment: fixed;
     background-size: cover;
     text-align: center;
-    padding: 50px 0; /* Ensures proper spacing */
+    padding: 50px 0;
+    position: relative;
+}
+
+.text-container {
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px); /* Adds the blur effect */
+}
+
+.hero h2, .hero span, .uvp h2, .uvp span, .team h2, .team span {
+    color: white; /* Changed from dark blue to white for better contrast */
+    font-family: Georgia, serif;
+    font-size: 500%;
+    position: relative;
+    z-index: 2;
 }
 
 .uvp {
@@ -31,15 +48,15 @@
     text-align: center;
     padding: 50px 0;
 }
-
-.hero h2, .uvp h2 {
+/* 
+.uvp h2, .uvp span {
     color: rgb(0, 11, 135);
     font-family: Georgia, serif;
     font-size: 500%;
-}
+} */
 
 .team h2 {
-    color: rgb(0, 11, 135);
+    /* color: rgb(0, 11, 135); */
     font-family: Georgia, serif;
     font-size: 400%;
 }
@@ -56,7 +73,7 @@
 }
 
 .hero p, .uvp p {
-    color: rgb(0, 11, 135);
+    color: white;
     font-family: Georgia, serif;
     font-size: 200%;
     margin: 20px;
