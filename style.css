@@ -6,7 +6,7 @@
 }
 
 .hero {
-    background-image: url('images/hero.jpg');
+    background-image: url('images/hero.webp');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -15,7 +15,7 @@
 }
 
 .uvp {
-    background-image: url('images/uvp.jpg');
+    background-image: url('images/uvp.webp');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -70,6 +70,7 @@
     font-size: 20px;
     font-family: Georgia, serif;
     border: 2px solid rgb(0, 11, 135);
+    cursor: pointer;
 }
 
 .price {
@@ -84,6 +85,7 @@
     text-align: center;
     font-size: 40%;
     font-family: Georgia, serif;
+    cursor: pointer;
 }
 
 /* Flexbox for testimonials section */
