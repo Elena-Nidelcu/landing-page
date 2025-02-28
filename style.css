@@ -199,6 +199,29 @@ footer a {
         padding: 12px 24px; /* Reduce padding for smaller screens */
         font-size: 50px; /* Slightly smaller font size */
     }
+
+    .testimonial-container {
+        flex-direction: column; /* Stack reviews vertically */
+        padding: 30px 5%; /* Adjust padding for mobile */
+    }
+
+    .box {
+        width: 100%; /* Make each box take up the full width on mobile */
+        margin-bottom: 20px; /* Space between reviews */
+    }
+
+    .box img {
+        width: 100%; /* Make images responsive on mobile */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .box h2 {
+        font-size: 150%; /* Reduce font size for mobile */
+    }
+
+    .box p {
+        font-size: 120%; /* Reduce font size for mobile */
+    }
 }
 
 @media (max-width: 480px) {
