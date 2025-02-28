@@ -1,8 +1,13 @@
+@font-face {
+    font-family: 'Touchdown';
+    src: url('fonts/touchdown.ttf') format('truetype');
+}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Touchdown', sans-serif !important;
 }
 
 .hero {
@@ -17,15 +22,15 @@
 
 .text-container {
     display: inline-block;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    background: rgba(0, 0, 0, 0.5); 
     padding: 20px;
     border-radius: 10px;
-    backdrop-filter: blur(10px); /* Adds the blur effect */
+    backdrop-filter: blur(10px); 
 }
 
+
 .hero h2, .hero span, .uvp h2, .uvp span, .team h2, .team span {
-    color: white; /* Changed from dark blue to white for better contrast */
-    font-family: Georgia, serif;
+    color: white; 
     font-size: 500%;
     position: relative;
     z-index: 2;
@@ -56,8 +61,6 @@
 } */
 
 .team h2 {
-    /* color: rgb(0, 11, 135); */
-    font-family: Georgia, serif;
     font-size: 400%;
 }
 
@@ -66,7 +69,6 @@
 }
 
 .hero span, .uvp span, .team p {
-    font-family: Georgia, serif;
     font-size: 75%;
     display: block;
     margin-top: 10px;
@@ -74,39 +76,35 @@
 
 .hero p, .uvp p {
     color: white;
-    font-family: Georgia, serif;
     font-size: 200%;
     margin: 20px;
 }
 
 .hero button {
-    background-color: #FFD700; /* Gold color for high visibility */
-    color: #001F3F; /* Dark blue for contrast */
+    background-color: #FFD700; 
+    color: #001F3F; 
     padding: 15px 32px;
     text-align: center;
     font-size: 20px;
-    font-family: Georgia, serif;
-    border: none; /* Removes the border for a cleaner look */
-    border-radius: 8px; /* Soft rounded corners */
+    border: none; 
+    border-radius: 8px; 
     cursor: pointer;
     font-weight: bold;
 }
 
 .price {
     text-align: center; 
-    font-family: Georgia, serif;
     font-size: 300%;
 }
 
 .price button {
-    background-color: #5a04dc; /* Bright blue for visibility */
-    color: white; /* White text for contrast */
+    background-color: #5a04dc; 
+    color: white; 
     padding: 15px 40px;
     text-align: center;
     font-size: 20px;
-    font-family: Georgia, serif;
-    border: none; /* Removes border for a clean look */
-    border-radius: 8px; /* Rounded corners */
+    border: none; 
+    border-radius: 8px;
     cursor: pointer;
     font-weight: bold;
 }
@@ -134,7 +132,6 @@
 
 .box h2 {
     font-size: 300%;
-    font-family: Georgia, serif;
 }
 
 .box p {
@@ -182,5 +179,5 @@ footer {
 
 footer a {
     color: white; 
-    margin: 5px 0; /* Vertical space between links */
+    margin: 5px 0; 
 }
