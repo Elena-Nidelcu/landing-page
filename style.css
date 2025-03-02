@@ -37,10 +37,6 @@
     margin: 0 auto;
 }
 
-.text-container:hover {
-    transform: translateY(-5px);
-}
-
 .hero h2, .hero span, .uvp h2, .uvp span, .team h2, .team span {
     color: white;
     font-size: 4rem;
@@ -114,11 +110,6 @@
     letter-spacing: 1px;
 }
 
-.hero button:hover, .price button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
 .testimonial-container {
     display: flex;
     justify-content: center;
@@ -136,10 +127,6 @@
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-}
-
-.box:hover {
-    transform: translateY(-10px);
 }
 
 .box img {
@@ -188,7 +175,7 @@
 }
 
 .answer {
-    background-color: #f8f9fa;
+    background-color: #e4e5e5;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
