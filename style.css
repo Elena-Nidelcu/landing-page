@@ -123,32 +123,62 @@
     width: 30%;
     text-align: center;
     background: white;
-    padding: 40px;
+    padding: 2.5rem;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* .box::before {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 4rem;
+    color: rgba(102, 126, 234, 0.1);
+    font-family: Georgia, serif;
+} */
+
+.box img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    border: 5px solid #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
 }
 
-.box img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 20px;
-    border: 5px solid #fff;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+.box h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin: 0.5rem 0;
+    letter-spacing: -0.02em;
 }
 
-.box h2 {
-    font-size: 1.8rem;
-    margin: 15px 0;
-    color: #333;
+.box hr {
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border: none;
+    margin: 1rem auto;
+    border-radius: 2px;
 }
 
 .box p {
     font-size: 1.1rem;
-    color: #666;
+    color: #4a5568;
     line-height: 1.6;
+    margin-top: 1rem;
+    font-style: italic;
+    position: relative;
+    z-index: 1;
 }
 
 .qa {
@@ -220,22 +250,27 @@ footer a:hover {
 
     .box {
         width: 100%;
-        margin-bottom: 30px;
+        padding: 2rem;
+        margin-bottom: 2rem;
     }
 
-    .box h2 {
-        font-size: 1.8rem;
+    .box img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .box h3 {
+        font-size: 1.3rem;
     }
 
     .box p {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .hero button, .price button {
         padding: 15px 30px;
         font-size: 1rem;
     }
-
 }
 
 @media (max-width: 480px) {
