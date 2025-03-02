@@ -41,6 +41,7 @@
     color: white;
     font-size: 4rem;
     position: relative;
+    line-height: 1.2;
 }
 
 .uvp {
@@ -73,7 +74,8 @@
     font-size: 1.5rem;
     display: block;
     margin-top: 20px;
-    opacity: 0.9;
+    opacity: 0.9;    
+    line-height: 1.2;
 }
 
 .hero p, .uvp p {
@@ -211,15 +213,15 @@ footer a:hover {
 
 @media (max-width: 768px) {
     .hero h2, .uvp h2, .team h2 {
-        font-size: 2.2rem;
+        font-size: 3rem;
     }
 
     .hero span, .uvp span, .team span {
-        font-size: 1.6rem;
+        font-size: 2.4rem;
     }
 
     .hero p, .uvp p, .team p, .qa p {
-        font-size: 1.4rem;
+        font-size: 2rem;
         margin: 15px auto;
         padding: 0 15px;
     }
@@ -255,8 +257,8 @@ footer a:hover {
     }
 
     .hero button, .price button {
-        padding: 16px 40px;
-        font-size: 1.2rem;
+        padding: 20px 50px;
+        font-size: 2rem;
     }
 
     .qa {
@@ -292,16 +294,16 @@ footer a:hover {
     }
 
     .box img {
-        width: 100px;
-        height: 100px;
+        width: 250px;
+        height: 250px;
     }
 
     .box h3 {
-        font-size: 1.1rem;
+        font-size: 2rem;
     }
 
     .box p {
-        font-size: 0.9rem;
+        font-size: 1.5rem;
     }
 
     .hero button, .price button {
@@ -310,11 +312,11 @@ footer a:hover {
     }
 
     .qa h2 {
-        font-size: 1.8rem;
+        font-size: 2.3rem;
     }
 
     footer {
-        font-size: 1rem;
+        font-size: 1.3rem;
         padding: 40px 15px;
     }
 }
