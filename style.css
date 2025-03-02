@@ -211,35 +211,43 @@ footer a:hover {
 
 @media (max-width: 768px) {
     .hero h2, .uvp h2, .team h2 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 
     .hero span, .uvp span, .team span {
-        font-size: 1.2rem;
+        font-size: 1.6rem;
     }
 
-    .hero p, .uvp p {
-        font-size: 1.2rem;
+    .hero p, .uvp p, .team p, .qa p {
+        font-size: 1.4rem;
+        margin: 15px auto;
+        padding: 0 15px;
+    }
+
+    .text-container {
+        padding: 30px;
+        max-width: 95%;
     }
 
     .testimonial-container {
         flex-direction: column;
         padding: 40px 20px;
+        gap: 20px;
     }
 
     .box {
         width: 100%;
-        padding: 2rem;
-        margin-bottom: 2rem;
+        padding: 1.8rem;
+        margin-bottom: 1.5rem;
     }
 
     .box img {
-        width: 150px;
-        height: 150px;
+        width: 120px;
+        height: 120px;
     }
 
     .box h3 {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 
     .box p {
@@ -247,25 +255,66 @@ footer a:hover {
     }
 
     .hero button, .price button {
-        padding: 15px 30px;
-        font-size: 1rem;
+        padding: 16px 40px;
+        font-size: 1.2rem;
+    }
+
+    .qa {
+        padding: 50px 20px;
     }
 }
 
 @media (max-width: 480px) {
-    .text-container {
-        padding: 20px;
-    }
-
     .hero h2, .uvp h2, .team h2 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
-    .qa {
-        padding: 40px 15px;
+    .hero span, .uvp span, .team span {
+        font-size: 1.8rem;
+    }
+
+    .text-container {
+        padding: 30px;
+    }
+
+    .hero p, .uvp p, .team p, .qa p {
+        font-size: 1.5rem;
+        margin: 10px auto;
+        padding: 0 10px;
+    }
+
+    .testimonial-container {
+        padding: 30px 15px;
+    }
+
+    .box {
+        padding: 1.5rem;
+    }
+
+    .box img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .box h3 {
+        font-size: 1.1rem;
+    }
+
+    .box p {
+        font-size: 0.9rem;
+    }
+
+    .hero button, .price button {
+        padding: 18px 45px;
+        font-size: 1.6rem;
     }
 
     .qa h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+    }
+
+    footer {
+        font-size: 1rem;
+        padding: 40px 15px;
     }
 }
