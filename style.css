@@ -211,6 +211,10 @@ footer a:hover {
     color: #667eea;
 }
 
+.race-date {
+    display: none; /* Hidden by default */
+}
+
 @media (max-width: 768px) {
     .hero h2, .uvp h2, .team h2 {
         font-size: 3rem;
@@ -263,6 +267,17 @@ footer a:hover {
 
     .qa {
         padding: 50px 20px;
+    }
+
+    .race-date {
+        display: block; /* Show only on mobile */
+        text-align: center;
+        padding: 20px;
+        font-size: 1.5rem;
+        color: black;
+        font-weight: bold;
+        margin: 20px 0;
+        line-height: 1.2;
     }
 }
 
