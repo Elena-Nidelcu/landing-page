@@ -335,3 +335,312 @@ footer a:hover {
         padding: 40px 15px;
     }
 }
+
+/* Mascot Styles */
+.mascot {
+    position: fixed;
+    z-index: 1000;
+    opacity: 0;
+    width: 150px;
+    height: 150px;
+    pointer-events: auto; 
+    transform-origin: center bottom;
+    cursor: pointer;
+}
+
+.mascot img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.2));
+}
+
+/* Top right mascot */
+.mascot-top-right {
+    top: 20px;
+    right: 20px;
+    animation: 
+        fadeInBounceTopRight 1s ease-out 2s forwards,
+        float 3s ease-in-out infinite 3s,
+        tilt 2s ease-in-out infinite 3s;
+}
+
+/* Bottom left mascot */
+.mascot-bottom-left {
+    bottom: 20px;
+    left: 20px;
+    animation: 
+        fadeInBounceBottomLeft 1s ease-out 3s forwards,
+        jump 1s ease-in-out infinite 4s,
+        rotate 4s linear infinite 4s;
+}
+
+/* Tooltip styles */
+.mascot::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Position tooltips differently for each mascot */
+.mascot-top-right::before {
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-10px);
+}
+
+.mascot-bottom-left::before {
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%) translateX(10px);
+}
+
+/* Show tooltip on hover */
+.mascot:hover::before {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-50%) translateX(0);
+}
+
+/* Add arrow to tooltip */
+.mascot::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.mascot-top-right::after {
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-width: 6px 0 6px 6px;
+    border-color: transparent transparent transparent rgba(0, 0, 0, 0.8);
+}
+
+.mascot-bottom-left::after {
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-width: 6px 6px 6px 0;
+    border-color: transparent rgba(0, 0, 0, 0.8) transparent transparent;
+}
+
+/* Show arrow on hover */
+.mascot:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Mobile tooltip adjustments */
+@media (max-width: 768px) {
+    .mascot {
+        width: 100px;
+        height: 100px;
+    }
+
+    .mascot-top-right {
+        top: 10px;
+        right: 10px;
+    }
+
+    .mascot-bottom-left {
+        bottom: 10px;
+        left: 10px;
+    }
+
+    .mascot::before {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+
+    .mascot-top-right::before {
+        right: auto;
+        left: 50%;
+        top: -40px;
+        transform: translateX(-50%) translateY(0);
+    }
+
+    .mascot-bottom-left::before {
+        left: 50%;
+        top: -40px;
+        transform: translateX(-50%) translateY(0);
+    }
+
+    .mascot-top-right::after,
+    .mascot-bottom-left::after {
+        left: 50%;
+        top: -10px;
+        transform: translateX(-50%);
+        border-width: 0 6px 6px 6px;
+        border-color: transparent transparent rgba(0, 0, 0, 0.8) transparent;
+    }
+
+    .mascot:hover::before {
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+/* Hide tooltips on very small screens */
+@media (max-width: 480px) {
+    .mascot {
+        width: 80px;
+        height: 80px;
+    }
+
+    .mascot::before,
+    .mascot::after {
+        display: none;
+    }
+}
+
+/* Prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .mascot {
+        animation: fadeInBounceTopRight 1s ease-out 2s forwards !important;
+    }
+    
+    .mascot:hover img {
+        animation: none !important;
+        transform: scale(1.1);
+    }
+}
+
+/* Hide mascots when screen height is too small */
+@media (max-height: 500px) {
+    .mascot {
+        display: none;
+    }
+}
+
+/* Initial appearance animations */
+@keyframes fadeInBounceTopRight {
+    0% {
+        opacity: 0;
+        transform: translate(50px, -50px) scale(0.5);
+    }
+    50% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1.2);
+    }
+    75% {
+        transform: translate(0, 0) scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+@keyframes fadeInBounceBottomLeft {
+    0% {
+        opacity: 0;
+        transform: translate(-50px, 50px) scale(0.5);
+    }
+    50% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1.2);
+    }
+    75% {
+        transform: translate(0, 0) scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+/* Continuous animations */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes tilt {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    75% {
+        transform: rotate(-5deg);
+    }
+}
+
+@keyframes jump {
+    0%, 100% {
+        transform: translateY(0) scaleY(1);
+    }
+    40% {
+        transform: translateY(-30px) scaleY(1.1);
+    }
+    45% {
+        transform: translateY(-30px) scaleY(1.1);
+    }
+    55% {
+        transform: translateY(0) scaleY(0.9);
+    }
+    65% {
+        transform: translateY(-7px) scaleY(1.05);
+    }
+    75% {
+        transform: translateY(0) scaleY(0.95);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    75% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Walking animation for hover */
+@keyframes walk {
+    0%, 100% {
+        transform: translateX(0) scaleX(1);
+    }
+    25% {
+        transform: translateX(10px) scaleX(1.1);
+    }
+    50% {
+        transform: translateX(0) scaleX(1);
+    }
+    75% {
+        transform: translateX(-10px) scaleX(0.9);
+    }
+}
+
+/* Enhanced hover effects */
+.mascot:hover img {
+    animation: walk 0.5s ease-in-out infinite;
+}
