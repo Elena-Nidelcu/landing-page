@@ -335,3 +335,280 @@ footer a:hover {
         padding: 40px 15px;
     }
 }
+
+/* Mascot Styles */
+.mascot {
+    position: fixed;
+    z-index: 1000;
+    opacity: 0;
+    width: 150px;
+    height: 150px;
+    pointer-events: auto;
+    transform-origin: center bottom;
+}
+
+.mascot img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.2));
+}
+
+/* Tooltip styles */
+.mascot::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+    z-index: 1001;
+}
+
+/* Top right mascot tooltip */
+.mascot-top-right::after {
+    bottom: 120%;
+    right: 0;
+    transform: translateY(10px);
+}
+
+/* Bottom left mascot tooltip */
+.mascot-bottom-left::after {
+    top: 120%;
+    left: 0;
+    transform: translateY(-10px);
+}
+
+/* Show tooltip on hover */
+.mascot:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Remove any hover animations on the image */
+.mascot:hover img {
+    animation: none;
+}
+
+/* Top right mascot */
+.mascot-top-right {
+    top: 20px;
+    right: 20px;
+    animation: 
+        fadeInBounceTopRight 1s ease-out 2s forwards,
+        float 3s ease-in-out infinite 3s,
+        tilt 2s ease-in-out infinite 3s;
+}
+
+/* Bottom left mascot */
+.mascot-bottom-left {
+    bottom: 20px;
+    left: 20px;
+    animation: 
+        fadeInBounceBottomLeft 1s ease-out 3s forwards,
+        jump 1s ease-in-out infinite 4s,
+        rotate 4s linear infinite 4s;
+}
+
+/* Initial appearance animations */
+@keyframes fadeInBounceTopRight {
+    0% {
+        opacity: 0;
+        transform: translate(50px, -50px) scale(0.5);
+    }
+    50% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1.2);
+    }
+    75% {
+        transform: translate(0, 0) scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+@keyframes fadeInBounceBottomLeft {
+    0% {
+        opacity: 0;
+        transform: translate(-50px, 50px) scale(0.5);
+    }
+    50% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1.2);
+    }
+    75% {
+        transform: translate(0, 0) scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+/* Continuous animations */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes tilt {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    75% {
+        transform: rotate(-5deg);
+    }
+}
+
+@keyframes jump {
+    0%, 100% {
+        transform: translateY(0) scaleY(1);
+    }
+    40% {
+        transform: translateY(-30px) scaleY(1.1);
+    }
+    45% {
+        transform: translateY(-30px) scaleY(1.1);
+    }
+    55% {
+        transform: translateY(0) scaleY(0.9);
+    }
+    65% {
+        transform: translateY(-7px) scaleY(1.05);
+    }
+    75% {
+        transform: translateY(0) scaleY(0.95);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    75% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Walking animation for hover */
+@keyframes walk {
+    0%, 100% {
+        transform: translateX(0) scaleX(1);
+    }
+    25% {
+        transform: translateX(10px) scaleX(1.1);
+    }
+    50% {
+        transform: translateX(0) scaleX(1);
+    }
+    75% {
+        transform: translateX(-10px) scaleX(0.9);
+    }
+}
+
+/* Mobile styles for mascot */
+@media (max-width: 768px) {
+    .mascot {
+        width: 100px;
+        height: 100px;
+    }
+
+    .mascot-top-right {
+        top: 10px;
+        right: 10px;
+    }
+
+    .mascot-bottom-left {
+        bottom: 10px;
+        left: 10px;
+    }
+
+    /* Adjust animation distances for mobile */
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+    @keyframes jump {
+        0%, 100% {
+            transform: translateY(0) scaleY(1);
+        }
+        40% {
+            transform: translateY(-20px) scaleY(1.1);
+        }
+        45% {
+            transform: translateY(-20px) scaleY(1.1);
+        }
+        55% {
+            transform: translateY(0) scaleY(0.9);
+        }
+        65% {
+            transform: translateY(-5px) scaleY(1.05);
+        }
+        75% {
+            transform: translateY(0) scaleY(0.95);
+        }
+    }
+}
+
+/* Reduce animations on smaller screens */
+@media (max-width: 480px) {
+    .mascot {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* Simpler animations for better performance */
+    .mascot-top-right, .mascot-bottom-left {
+        animation: fadeInBounceTopRight 1s ease-out 2s forwards, 
+                  tilt 3s ease-in-out infinite 3s;
+    }
+}
+
+/* Prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .mascot {
+        animation: fadeInBounceTopRight 1s ease-out 2s forwards !important;
+    }
+    
+    .mascot:hover img {
+        animation: none !important;
+        transform: scale(1.1);
+    }
+}
+
+/* Hide mascots when screen height is too small */
+@media (max-height: 500px) {
+    .mascot {
+        display: none;
+    }
+}
