@@ -27,6 +27,10 @@ Here are the reviews from the BEST REAL participants of previous races.
 ![Contact Information](screenshots/contacts.png)  
 This is the footer of the page.
 
+### Mobile friendly example  
+![Responsiveness](screenshots/mobile.png)  
+This is the footer of the page.
+
 ## Live Demo
 [Link to the page](https://elena-nidelcu.github.io/landing-page/) 
 (Using GitHub pages)
