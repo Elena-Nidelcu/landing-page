@@ -343,8 +343,8 @@ footer a:hover {
     opacity: 0;
     width: 150px;
     height: 150px;
-    pointer-events: auto;
-    transform-origin: center bottom;
+    pointer-events: none;
+    transform-origin: center bottom; /* For better jumping animation */
 }
 
 .mascot img {
@@ -352,52 +352,6 @@ footer a:hover {
     height: 100%;
     object-fit: contain;
     filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.2));
-}
-
-/* Tooltip styles */
-.mascot::after {
-    content: attr(data-tooltip);
-    position: absolute;
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 15px 20px;
-    border-radius: 10px;
-    font-size: 1rem;
-    white-space: nowrap;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(5px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    pointer-events: none;
-    z-index: 1001;
-}
-
-/* Top right mascot tooltip */
-.mascot-top-right::after {
-    bottom: 120%;
-    right: 0;
-    transform: translateY(10px);
-}
-
-/* Bottom left mascot tooltip */
-.mascot-bottom-left::after {
-    top: 120%;
-    left: 0;
-    transform: translateY(-10px);
-}
-
-/* Show tooltip on hover */
-.mascot:hover::after {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-/* Remove any hover animations on the image */
-.mascot:hover img {
-    animation: none;
 }
 
 /* Top right mascot */
@@ -529,6 +483,11 @@ footer a:hover {
     75% {
         transform: translateX(-10px) scaleX(0.9);
     }
+}
+
+/* Enhanced hover effects */
+.mascot:hover img {
+    animation: walk 0.5s ease-in-out infinite;
 }
 
 /* Mobile styles for mascot */
